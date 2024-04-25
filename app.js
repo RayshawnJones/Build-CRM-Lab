@@ -76,6 +76,7 @@ async function menu() {
       case "5":
         console.log(`${username}, thank you for using the CRM Tool. Goodbye`);
         running = false;
+        mongoose.connection.close();
         return;
       default:
         console.log("Invalid choice");
